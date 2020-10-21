@@ -2,6 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const fontSize = 50;
+const variable = 12;
+const flag = false;
+
 function App() {
   return (
     <div className="App">
@@ -13,6 +17,25 @@ function App() {
         <div>
           Hi everyone!
         </div>
+        <p style={{
+          color: 'red',
+          fontSize: fontSize
+        }}>Style</p>
+        <p>{variable}</p>
+        <p>{43}</p>
+        <p>{12-5}</p>
+        <p>{flag && 'Hi'}</p>
+        <p>{flag ? 'Hello' : 'Not hello'}</p>
+        <p>
+          {'undefined'}
+        </p>
+        <p>{null}</p>
+        <p>
+          {' false'}
+        </p>
+        <p>
+          {true}
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
