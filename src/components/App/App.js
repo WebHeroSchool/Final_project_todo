@@ -19,9 +19,9 @@ const App = () => {
     }];
   return (
     <div className={styles.wrap}>
-      <h1 className={styles.title}>todos</h1>
-      <InputItem className={styles.input} />
-      <ItemList todoItems={todoItems} className={styles.item}/>
+      <h1 className={styles.title}>Список дел</h1>
+      <InputItem />
+      <ItemList todoItems={todoItems} />
       <Footer count={count}/>
     </div>
   )

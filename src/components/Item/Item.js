@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './Item.module.css';
 
 const Item = ({ value }) => (
-  <li>{value}</li>
+  <li className = {styles.item}>{value}</li>
 );
 
 export default Item;
