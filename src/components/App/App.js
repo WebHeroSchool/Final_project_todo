@@ -2,7 +2,7 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import InputItem from '../InputItems/InputItems';
 import Footer from '../Footer/Footer';
-import './App.css';
+import styles from './App.module.css';
 
 const count = 6;
 
@@ -18,10 +18,10 @@ const App = () => {
       value: 'Навести порядок'
     }];
   return (
-    <div className="wrap">
-      <h1 className="wrap__title">todos</h1>
-      <InputItem className="wrap__input" />
-      <ItemList todoItems={todoItems} className="wrap__item"/>
+    <div className={styles.wrap}>
+      <h1 className={styles.title}>Список дел</h1>
+      <InputItem />
+      <ItemList todoItems={todoItems} />
       <Footer count={count}/>
     </div>
   )
