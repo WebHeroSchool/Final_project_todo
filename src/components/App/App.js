@@ -9,13 +9,16 @@ const count = 6;
 const App = () => {
   const todoItems = [
     {
-      value: 'Закончить модуль'
+      value: 'Закончить модуль',
+      isDone: true
     },
     {
-      value: 'Заплатить по счетам'
+      value: 'Заплатить по счетам',
+      isDone: false
     },
     {
-      value: 'Навести порядок'
+      value: 'Навести порядок',
+      isDone: true
     }];
   return (
     <div className={styles.wrap}>
