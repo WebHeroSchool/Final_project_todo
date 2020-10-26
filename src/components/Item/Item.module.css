@@ -1,0 +1,10 @@
+.item {
+  font-family: "Arial Black", sans-serif;
+  color: #333;
+}
+
+.done {
+  color: #c4c4c4;
+  text-decoration-color: #333;
+  text-decoration-line: line-through;
+}

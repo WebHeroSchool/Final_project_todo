@@ -3,7 +3,7 @@ import Item from '../Item/Item';
 
 const ItemList = ({ todoItems }) => (
   <ul>
-    {todoItems.map(item => <Item value = {item.value} key = {item.value}/>)}
+    {todoItems.map(item => <Item value = {item.value} isDone = {item.isDone} key = {item.value}/>)}
   </ul>
 );
 
