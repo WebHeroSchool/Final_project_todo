@@ -1,3 +1,9 @@
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .item {
   font-family: "Arial Black", sans-serif;
   color: #333;
@@ -7,4 +13,8 @@
   color: #c4c4c4;
   text-decoration-color: #333;
   text-decoration-line: line-through;
+}
+
+.delete{
+  visibility: hidden;
 }

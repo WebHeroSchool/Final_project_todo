@@ -1,0 +1,9 @@
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  font-size: 12px;
+}

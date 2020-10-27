@@ -4,8 +4,6 @@ import InputItem from '../InputItems/InputItems';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const count = 6;
-
 const App = () => {
   const todoItems = [
     {
@@ -22,10 +20,10 @@ const App = () => {
     }];
   return (
     <div className={styles.wrap}>
-      <h1 className={styles.title}>Список дел</h1>
+      <h1 className={styles.title}>Список дел:</h1>
       <InputItem />
       <ItemList todoItems={todoItems} />
-      <Footer count={count}/>
+      <Footer items={todoItems}/>
     </div>
   )
 };
