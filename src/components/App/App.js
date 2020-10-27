@@ -4,28 +4,31 @@ import InputItem from '../InputItems/InputItems';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const App = () => {
-  const todoItems = [
-    {
-      value: 'Закончить модуль',
-      isDone: true
-    },
-    {
-      value: 'Заплатить по счетам',
-      isDone: false
-    },
-    {
-      value: 'Навести порядок',
-      isDone: true
-    }];
-  return (
-    <div className={styles.wrap}>
-      <h1 className={styles.title}>Список дел:</h1>
-      <InputItem />
-      <ItemList todoItems={todoItems} />
-      <Footer items={todoItems}/>
-    </div>
-  )
+class App extends React.Component {
+  render() {
+    const todoItems = [
+      {
+        value: 'Закончить модуль',
+        isDone: true
+      },
+      {
+        value: 'Заплатить по счетам',
+        isDone: false
+      },
+      {
+        value: 'Навести порядок',
+        isDone: true
+      }];
+    return (
+      <div className={styles.wrap}>
+        <h1 className={styles.title}>Список дел:</h1>
+        <InputItem />
+        <ItemList todoItems={todoItems} />
+        <Footer items={todoItems}/>
+      </div>
+    )
+  }
 };
+
 
 export default App;
