@@ -2,9 +2,10 @@ import React from 'react';
 import classnames from 'classnames';
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from '@material-ui/core/IconButton';
+import Checkbox from '@material-ui/core/Checkbox';
 import styles from './Item.module.css';
 
-const Item = ({ value, isDone }) => {
+const Item = ({ value, isDone, onMouseClick }) => {
   const [show, setShow] = React.useState(false);
 
   const mouseLeave = () => {
@@ -17,6 +18,10 @@ const Item = ({ value, isDone }) => {
 
   return (
   <div className = {styles.wrap} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+    <Checkbox
+      checked = {isDone}
+      inputProps={{ 'aria-label': 'primary checkbox' }}
+      onClick = {() => onMouseClick(isDone)}/>
     <li className = {
       classnames({
         [styles.item]: true,

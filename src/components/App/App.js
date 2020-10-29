@@ -20,12 +20,17 @@ class App extends React.Component {
         isDone: true
       }]
   };
+  
+  onMouseClick = (isDone) => {
+    console.log(isDone)
+  }
+  
   render() {
     return (
       <div className={styles.wrap}>
         <h1 className={styles.title}>Список дел:</h1>
         <InputItem/>
-        <ItemList todoItems={this.state.todoItems}/>
+        <ItemList todoItems={this.state.todoItems} onMouseClick={this.onMouseClick}/>
         <Footer items={this.state.todoItems}/>
       </div>
     )
