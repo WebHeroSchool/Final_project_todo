@@ -1,18 +1,25 @@
-.wrap {
+.wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
   align-items: center;
 }
 
 .item {
   font-family: "Arial Black", sans-serif;
   color: #333;
+  list-style-type: none;
 }
 
 .done {
   color: #c4c4c4;
   text-decoration-color: #333;
   text-decoration-line: line-through;
+  list-style-type: none;
 }
 
 .delete{
