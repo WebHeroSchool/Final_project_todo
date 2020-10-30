@@ -9,20 +9,31 @@ class App extends React.Component {
     todoItems: [
       {
         value: 'Закончить модуль',
-        isDone: true
+        isDone: true,
+        id: 1
       },
       {
         value: 'Заплатить по счетам',
-        isDone: false
+        isDone: false,
+        id: 2
       },
       {
         value: 'Навести порядок',
-        isDone: true
+        isDone: true,
+        id: 3
       }]
   };
   
-  onMouseClick = (isDone) => {
-    console.log(isDone)
+  onMouseClick = (id) => {
+    const newItemList = this.state.todoItems.map(item => {
+      const newItem = {...item}
+      if (item.id === id) {
+        newItem.isDone = !item.isDone;
+      }
+      return newItem;
+    });
+
+    this.setState({todoItems: newItemList});
   }
   
   render() {
